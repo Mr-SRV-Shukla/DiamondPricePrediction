@@ -87,4 +87,4 @@ Feel free to contribute to this project. You can fork the repository, make your 
 
 For any inquiries or issues, feel free to contact me at:
 - **Email**: souravshukla@gmail.com
-- **GitHub**: [@your-username](https://github.com/Mr-SRV-Shukla)
+- **GitHub**: [@Mr-SRV-Shukla](https://github.com/Mr-SRV-Shukla)
