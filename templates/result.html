@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        /* General styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #e3f2fd, #e0f7fa);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .result-container {
+            background: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            padding: 30px 40px;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .result-container h2 {
+            margin: 0 0 20px;
+            color: #00796b;
+            font-size: 2rem;
+        }
+
+        .result-container .result-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #004d40;
+            margin: 20px 0;
+        }
+
+        .result-container p {
+            font-size: 1rem;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        .back-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #00796b;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            background-color: #004d40;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h2>Prediction Result</h2>
+
+        {% if final_result %}
+            <div class="result-value">The predicted price is: {{ final_result }}</div>
+        {% else %}
+            <div class="result-value">No prediction available. Please try again.</div>
+        {% endif %}
+
+        <p>Thank you for using our Diamond Price Prediction service.</p>
+        
+        <a href="{{ url_for('home_page') }}" class="back-btn">Back to Home</a>
+
+    </div>
+</body>
+</html>
